@@ -1,30 +1,28 @@
 import Component from 'vue-class-component';
 import MarkdownEditor from './components/MarkdownEditor';
 
-const defaultInput = `
-  # Some title
+const defaultInput = `# Some title
 
-  ## Some table
+## Some table
 
-  |Name|Description|
-  |---|---|
-  |foo|bar|
-  |baz|qux|
-  |quux|corge|
-  |grault|garply|
-  |waldo|fred|
+|Name|Description|
+|---|---|
+|foo|bar|
+|baz|qux|
+|quux|corge|
+|grault|garply|
+|waldo|fred|
 
-  ## Some image
+## Some image
 
-  ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-  ## Some list
+## Some list
 
-  * foo
-  * bar
-  * baz
-  * qux
-`;
+* foo
+* bar
+* baz
+* qux`;
 
 @Component({
   name: 'App',
