@@ -1,0 +1,46 @@
+{
+  "name": "vue-markdown-example",
+  "version": "1.0.0",
+  "description": "Simple markdown editor",
+  "main": "build/server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "marked": "^0.3.6",
+    "vue": "^2.0.1",
+    "vue-class-component": "^4.0.1",
+    "vue-server-renderer": "^2.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-core": "^6.17.0",
+    "babel-helper-vue-jsx-merge-props": "^2.0.1",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-syntax-jsx": "^6.13.0",
+    "babel-plugin-transform-vue-jsx": "^3.1.0",
+    "css-loader": "^0.25.0",
+    "lodash-es": "^4.16.4",
+    "node-sass": "^3.10.1",
+    "node-style-loader": "0.0.1-alpha",
+    "ntypescript": "1.201609302242.1",
+    "postcss-autoreset": "^1.2.0",
+    "postcss-initial": "^1.5.2",
+    "postcss-loader": "^0.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "webpack": "^2.1.0-beta.19",
+    "webpack-node-externals": "^1.5.4"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --progress --color --watch",
+    "start": "node build/server.js"
+  },
+  "babel": {
+    "plugins": [
+      "transform-vue-jsx"
+    ]
+  },
+  "author": "Leandre Gohy <leandre.gohy@hexeo.be>",
+  "license": "MIT"
+}

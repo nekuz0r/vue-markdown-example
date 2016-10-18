@@ -1,0 +1,22 @@
+$header-height: 75px;
+
+:global body {
+  padding-top: $header-height;
+}
+
+.header {
+  all: initial;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $header-height;
+  width: 100vw;
+  z-index: 999;
+  background-color: grey;
+  transition: height 0.5s;
+
+  &.squeezed {
+    height: 30px;
+  }
+}
