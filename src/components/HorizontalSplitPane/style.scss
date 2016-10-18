@@ -1,0 +1,26 @@
+.splitPane {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .panel {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    vertical-align: top;
+    overflow: hidden;
+  }
+
+  .handle {
+    position: absolute;
+    display: inline-block;
+    z-index: 9999;
+    background-color: transparent;
+    cursor: col-resize;
+    height: 100%;
+    width: 4px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}

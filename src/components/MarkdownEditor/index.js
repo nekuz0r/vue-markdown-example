@@ -1,15 +1,12 @@
 import Component from 'vue-class-component';
-import * as style from './style.scss';
-import * as marked from 'marked';
-import { debouce } from 'lodash-es';
+import style from './style.scss';
+import marked from 'marked';
 
-import Button from '../Button';
+import HorizontalSplitPane from '../HorizontalSplitPane';
 
 @Component({
   name: 'MarkdownEditor',
-  component: {
-    Button
-  },
+  components: { HorizontalSplitPane },
   props: {
     value: {
       type: String,
@@ -23,7 +20,7 @@ import Button from '../Button';
     }
   }
 })
-export default class Counter {
+export default class MarkdownEditor {
   data () {
     return {
       input: String()
@@ -49,12 +46,16 @@ export default class Counter {
 
   render (h) {
     return (
-      <div class={style.editor} style={{ height: this.height, width: this.width }}>
-        <div class={style.input}>
-          <textarea on-input={this.update}>{this.value}</textarea>
-        </div>
-        <div class={style.render} domProps-innerHTML={this.html}>
-        </div>
+      <div  class={style.editor}
+            style={{ height: this.height, width: this.width }}>
+        <HorizontalSplitPane>
+          <div slot="left" class={style.input}>
+            <textarea on-input={this.update}>{this.value}</textarea>
+          </div>
+          <div  slot="right"
+                class={style.render}
+                domProps-innerHTML={this.html} />
+        </HorizontalSplitPane>
       </div>
     );
   }

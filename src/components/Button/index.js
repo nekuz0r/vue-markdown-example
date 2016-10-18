@@ -1,10 +1,10 @@
 import Component from 'vue-class-component';
-import * as style from './style.scss';
+import style from './style.scss';
 
 @Component({
   name: 'Button'
 })
-export default class Counter {
+export default class Button {
   handleClick () {
     this.$emit('click');
   }

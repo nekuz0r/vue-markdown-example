@@ -2,6 +2,7 @@
 
 .editor {
   all: initial;
+  position: relative;
   display: block;
   height: 100%;
   width: 100%;
@@ -10,13 +11,9 @@
   color: $font-color;
 
   .input {
-    position: relative;
-    display: inline-block;
     height: 100%;
-    width: 50%;
-    vertical-align: top;
+    width: 100%;
     border-right: 1px solid $silver;
-    overflow: hidden;
 
     > textarea {
       height: 100%;
@@ -32,11 +29,8 @@
   }
 
   .render {
-    display: inline-block;
     height: 100%;
-    width: 50%;
-    vertical-align: top;
-    overflow: auto;
+    width: 100%;
     background-color: $clouds;
     padding: 20px;
 

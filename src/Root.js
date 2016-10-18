@@ -1,6 +1,6 @@
 import Component from 'vue-class-component';
 import App from './App';
-import {collectInitial} from 'node-style-loader/collect';
+import { collectInitial } from 'node-style-loader/collect';
 
 let initialStyle = collectInitial();
 initialStyle = initialStyle.replace('<style class="server-style-loader-element">', '');
