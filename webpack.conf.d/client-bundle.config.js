@@ -31,12 +31,11 @@ module.exports = {
             query: {
               modules: true,
               camelCase: true,
-              importLoaders: 1
-              //localIdentName: '[path][name]---[local]---[hash:base64:5]'
+              importLoaders: 1,
+              localIdentName: '[path][name]---[local]---[hash:base64:5]'
             }
           },
-          { loader: 'postcss' },
-          { loader: 'sass' }
+          { loader: 'postcss' }
         ]
       }
     ]
@@ -49,15 +48,30 @@ module.exports = {
       test: /\.s?css$/,
       options: {
         context: __dirname,
-        postcss: [
-          require('postcss-autoreset')({
-            reset: {
-              boxSizing: 'border-box'
-            }
-          }),
-          require('postcss-initial')(),
-          require('autoprefixer')
-        ]
+        postcss: function (webpack) {
+          return [
+            require('postcss-import')({
+              addDependencyTo: webpack,
+              plugins: [
+                require("stylelint")({ /* your options */ })
+              ]
+            }),
+            require('postcss-each'),
+            require('postcss-simple-vars'),
+            require('postcss-nested'),
+            require('postcss-autoreset')({
+              reset: {
+                boxSizing: 'border-box'
+              }
+            }),
+            require('postcss-initial')(),
+            require('autoprefixer'),
+            require("postcss-reporter")({
+              clearMessages: true,
+              throwError: true
+            })
+          ];
+        }
       }
     }),
     new webpack.LoaderOptionsPlugin({
@@ -73,7 +87,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"dev"'
     }),
+    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
-    new webpack.optimize.DedupePlugin()
   ]
 };

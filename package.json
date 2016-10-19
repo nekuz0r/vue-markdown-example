@@ -27,14 +27,20 @@
     "eslint-plugin-react": "^6.4.1",
     "eslint-plugin-standard": "^2.0.1",
     "lodash-es": "^4.16.4",
-    "node-sass": "^3.10.1",
     "node-style-loader": "0.0.1-alpha",
     "ntypescript": "1.201609302242.1",
     "postcss-autoreset": "^1.2.0",
+    "postcss-each": "^0.9.3",
+    "postcss-import": "8.1.0",
     "postcss-initial": "^1.5.2",
     "postcss-loader": "^0.13.0",
-    "sass-loader": "^4.0.2",
+    "postcss-nested": "^1.0.0",
+    "postcss-reporter": "^1.4.1",
+    "postcss-simple-vars": "^3.0.0",
     "style-loader": "^0.13.1",
+    "stylelint": "^7.4.2",
+    "stylelint-config-css-modules": "^0.1.0",
+    "stylelint-config-standard": "^13.0.2",
     "ts-loader": "^0.8.2",
     "webpack": "^2.1.0-beta.25",
     "webpack-node-externals": "^1.5.4"
@@ -63,6 +69,12 @@
       "browser": true,
       "mocha": true
     }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-css-modules"
+    ]
   },
   "author": "Leandre Gohy <leandre.gohy@hexeo.be>",
   "license": "MIT"

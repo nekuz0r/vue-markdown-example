@@ -1,4 +1,4 @@
-@import '../commons';
+@import '../_commons.scss';
 
 .editor {
   all: initial;
@@ -37,15 +37,17 @@
 
     table {
       border-spacing: 0;
-      border-collapse: collapse;;
+      border-collapse: collapse;
 
       tr {
         background-color: white;
+
         &:nth-child(2n) {
           background-color: $clouds;
         }
 
-        th, td {
+        th,
+        td {
           padding: 6px 13px;
           border: 1px solid $silver;
         }

@@ -1,4 +1,4 @@
-@import '../commons';
+@import '../_commons.scss';
 
 .button {
   all: initial;
@@ -8,14 +8,12 @@
   touch-action: manipulation;
   cursor: pointer;
   text-align: center;
-
   border-radius: $border-radius;
   padding: ($padding / 2) $padding;
   margin: 0;
   line-height: $line-height;
   font-size: $font-size;
   font-family: $font-family;
-
   border: 1px solid darken($clouds, 5%);
   background-color: $white;
   color: $font-color;
@@ -31,7 +29,7 @@
   }
 
   @each $name, $value in $colors {
-    &.button-#{$name} {
+    &.button-$($name) {
       border: 1px solid darken($value, 5%);
       background-color: $value;
       color: $white;
