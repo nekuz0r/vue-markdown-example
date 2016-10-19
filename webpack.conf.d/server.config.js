@@ -11,18 +11,23 @@ module.exports = {
     filename: 'server.js',
     path: './build/'
   },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
-  },
   module: {
-    rules: [{
-      test: /\.jsx?$/,
-      exclude: /node_modules/,
-      use: [
-        { loader: 'babel' },
-        { loader: 'ts' }
-      ],
-    }]
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        use: [ { loader: 'eslint' } ]
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'babel' },
+          { loader: 'ts' }
+        ],
+      }
+    ]
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({

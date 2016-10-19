@@ -12,11 +12,14 @@ module.exports = {
     path: './build/',
     libraryTarget: 'commonjs2'
   },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
-  },
   module: {
     rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        use: [ { loader: 'eslint' } ]
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
