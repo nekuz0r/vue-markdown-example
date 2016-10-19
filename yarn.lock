@@ -30,8 +30,8 @@ ajv-keywords@^1.0.0:
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.1.1.tgz#02550bc605a3e576041565628af972e06c549d50"
 
 ajv@^4.7.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.8.0.tgz#011df5c4a08edb29574a477269afb15a6f97abe5"
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.8.1.tgz#708213577289a84a8148e66daa980c32da6a562e"
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
@@ -229,7 +229,7 @@ babel-core@^6.16.0, babel-core@^6.17.0:
     slash "^1.0.0"
     source-map "^0.5.0"
 
-babel-eslint:
+babel-eslint@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-7.0.0.tgz#54e51b4033f54ac81326ecea4c646a779935196d"
   dependencies:
@@ -755,7 +755,7 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cosmiconfig@^2.0.0:
+cosmiconfig@^2.0.0, cosmiconfig@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-2.1.0.tgz#26e384a2055ea4e087050e5e08d53eb4eac8f86e"
   dependencies:
@@ -1170,7 +1170,38 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint:
+eslint-config-semistandard@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-semistandard/-/eslint-config-semistandard-7.0.0.tgz#f803493f56a5172f7f59c35ae648360b41f2ff71"
+
+eslint-config-standard@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-6.2.0.tgz#1d2384ee074de6f6b6c0f2bbe976863032565aee"
+
+eslint-loader@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-loader/-/eslint-loader-1.6.0.tgz#38f9a1e6c602a4f1f3f3516289726e5d26e6e165"
+  dependencies:
+    find-cache-dir "^0.1.1"
+    loader-utils "^0.2.7"
+    object-assign "^4.0.1"
+
+eslint-plugin-promise@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.3.0.tgz#20a1ef58b4243ffdaef82ee9360a02353a7cca89"
+
+eslint-plugin-react@^6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-6.4.1.tgz#7d1aade747db15892f71eee1fea4addf97bcfa2b"
+  dependencies:
+    doctrine "^1.2.2"
+    jsx-ast-utils "^1.3.1"
+
+eslint-plugin-standard@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-2.0.1.tgz#3589699ff9c917f2c25f76a916687f641c369ff3"
+
+eslint@^3.8.1:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.8.1.tgz#7d02db44cd5aaf4fa7aa489e1f083baa454342ba"
   dependencies:
@@ -1207,37 +1238,6 @@ eslint:
     table "^3.7.8"
     text-table "~0.2.0"
     user-home "^2.0.0"
-
-eslint-config-semistandard:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-semistandard/-/eslint-config-semistandard-7.0.0.tgz#f803493f56a5172f7f59c35ae648360b41f2ff71"
-
-eslint-config-standard:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-6.2.0.tgz#1d2384ee074de6f6b6c0f2bbe976863032565aee"
-
-eslint-loader:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/eslint-loader/-/eslint-loader-1.6.0.tgz#38f9a1e6c602a4f1f3f3516289726e5d26e6e165"
-  dependencies:
-    find-cache-dir "^0.1.1"
-    loader-utils "^0.2.7"
-    object-assign "^4.0.1"
-
-eslint-plugin-promise:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.3.0.tgz#20a1ef58b4243ffdaef82ee9360a02353a7cca89"
-
-eslint-plugin-react:
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-6.4.1.tgz#7d1aade747db15892f71eee1fea4addf97bcfa2b"
-  dependencies:
-    doctrine "^1.2.2"
-    jsx-ast-utils "^1.3.1"
-
-eslint-plugin-standard:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-2.0.1.tgz#3589699ff9c917f2c25f76a916687f641c369ff3"
 
 espree@^3.3.1:
   version "3.3.2"
@@ -1714,7 +1714,7 @@ ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
-ignore@^3.1.3, ignore@^3.1.5, ignore@^3.2.0:
+ignore@^3.1.5, ignore@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.2.0.tgz#8d88f03c3002a0ac52114db25d2c673b0bf1e435"
 
@@ -2102,7 +2102,7 @@ loader-runner@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.2.0.tgz#824c1b699c4e7a2b6501b85902d5b862bf45b3fa"
 
-loader-utils@^0.2.11, loader-utils@^0.2.12, loader-utils@^0.2.15, loader-utils@^0.2.6, loader-utils@^0.2.7, loader-utils@~0.2.2:
+loader-utils@^0.2.11, loader-utils@^0.2.12, loader-utils@^0.2.16, loader-utils@^0.2.6, loader-utils@^0.2.7, loader-utils@~0.2.2:
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.16.tgz#f08632066ed8282835dff88dfb52704765adee6d"
   dependencies:
@@ -2173,7 +2173,7 @@ lodash.words@^3.0.0:
   dependencies:
     lodash._root "^3.0.0"
 
-lodash@^4.0.0, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.2.0, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.1.0, lodash@^4.2.0, lodash@^4.3.0:
   version "4.16.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.4.tgz#01ce306b9bad1319f2a5528674f88297aeb70127"
 
@@ -2445,10 +2445,6 @@ npmlog@4.x:
     gauge "~2.6.0"
     set-blocking "~2.0.0"
 
-ntypescript@1.201609302242.1:
-  version "1.201609302242.1+c302893a6201cbd822d6040b8361ad7a0ee506fa"
-  resolved "https://registry.yarnpkg.com/ntypescript/-/ntypescript-1.201609302242.1.tgz#309bed5ffda2f695cbd70d3561b8c0807f025c7b"
-
 num2fraction@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
@@ -2460,10 +2456,6 @@ number-is-nan@^1.0.0:
 oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
-
-object-assign@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-2.1.1.tgz#43c36e5d569ff8e4816c4efa8be02d26967c18aa"
 
 object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.0"
@@ -2703,7 +2695,7 @@ postcss-discard-unused@^2.2.1:
     postcss "^5.0.14"
     uniqs "^2.0.0"
 
-postcss-each:
+postcss-each@^0.9.3:
   version "0.9.3"
   resolved "https://registry.yarnpkg.com/postcss-each/-/postcss-each-0.9.3.tgz#e50ee7c849aa4cb2363ed437cb1dff43e895d4f9"
   dependencies:
@@ -2747,16 +2739,37 @@ postcss-less@^0.14.0:
   dependencies:
     postcss "^5.0.21"
 
-postcss-loader@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-0.13.0.tgz#72fdaf0d29444df77d3751ce4e69dc40bc99ed85"
+postcss-load-config@^1.0.0-rc:
+  version "1.0.0-rc"
+  resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-1.0.0-rc.tgz#8aed0d0fb94afe2c1ab0ba2ca69da3af5079e2cc"
   dependencies:
-    loader-utils "^0.2.15"
-    postcss "^5.2.0"
+    cosmiconfig "^2.1.0"
+    object-assign "^4.1.0"
+    postcss-load-options "^1.0.2"
+    postcss-load-plugins "^2.0.0-rc"
 
-postcss-media-query-parser@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-media-query-parser/-/postcss-media-query-parser-0.1.0.tgz#af258e28ef89f2d84b10102ac8be4a99fc779445"
+postcss-load-options@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-load-options/-/postcss-load-options-1.0.2.tgz#b99eb5759a588f4b2dd8b6471c6985f72060e7b0"
+  dependencies:
+    cosmiconfig "^2.1.0"
+    object-assign "^4.1.0"
+
+postcss-load-plugins@^2.0.0-rc:
+  version "2.0.0-rc"
+  resolved "https://registry.yarnpkg.com/postcss-load-plugins/-/postcss-load-plugins-2.0.0-rc.tgz#21242fb78de4d3d8eac9d1fef3863b8b794aa522"
+  dependencies:
+    cosmiconfig "^2.1.0"
+    object-assign "^4.1.0"
+
+postcss-loader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-1.0.0.tgz#e3b65d0c8596c1658f79d7db2d291310748d5d2a"
+  dependencies:
+    loader-utils "^0.2.16"
+    object-assign "^4.1.0"
+    postcss "^5.2.4"
+    postcss-load-config "^1.0.0-rc"
 
 postcss-media-query-parser@^0.2.0:
   version "0.2.1"
@@ -2796,11 +2809,11 @@ postcss-minify-font-values@^1.0.2:
     postcss-value-parser "^3.0.2"
 
 postcss-minify-gradients@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-minify-gradients/-/postcss-minify-gradients-1.0.3.tgz#09d228148c942fa8126679de9ff7738b54919fe3"
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/postcss-minify-gradients/-/postcss-minify-gradients-1.0.4.tgz#47d4fef7efbcc64e541fae6115c9a3cc84d47006"
   dependencies:
     postcss "^5.0.12"
-    postcss-value-parser "^3.1.3"
+    postcss-value-parser "^3.3.0"
 
 postcss-minify-params@^1.0.4:
   version "1.0.5"
@@ -2846,7 +2859,7 @@ postcss-modules-values@^1.1.0:
     icss-replace-symbols "^1.0.2"
     postcss "^5.0.14"
 
-postcss-nested:
+postcss-nested@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-1.0.0.tgz#d136bd4b576bd5632df142c12b2198a9ccf794df"
   dependencies:
@@ -2894,7 +2907,7 @@ postcss-reduce-transforms@^1.0.3:
     postcss "^5.0.8"
     postcss-value-parser "^3.0.1"
 
-postcss-reporter, postcss-reporter@^1.2.1, postcss-reporter@^1.3.0, postcss-reporter@^1.3.3:
+postcss-reporter@^1.2.1, postcss-reporter@^1.3.0, postcss-reporter@^1.3.3, postcss-reporter@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/postcss-reporter/-/postcss-reporter-1.4.1.tgz#c136f0a5b161915f379dd3765c61075f7e7b9af2"
   dependencies:
@@ -2907,7 +2920,7 @@ postcss-resolve-nested-selector@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/postcss-resolve-nested-selector/-/postcss-resolve-nested-selector-0.1.1.tgz#29ccbc7c37dedfac304e9fff0bf1596b3f6a0e4e"
 
-postcss-scss, postcss-scss@^0.3.0:
+postcss-scss@^0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/postcss-scss/-/postcss-scss-0.3.1.tgz#65c610d8e2a7ee0e62b1835b71b8870734816e4b"
   dependencies:
@@ -2921,15 +2934,15 @@ postcss-selector-parser@^2.0.0, postcss-selector-parser@^2.1.1:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-simple-vars:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-3.0.0.tgz#1fa4ccb4b7151d9f0d52fb8ea19a15c1319599d6"
-  dependencies:
-    postcss "^5.0.21"
-
 postcss-simple-vars@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-2.0.0.tgz#d0a1091b0da22b79507028f7b22b976c0a60b8d5"
+  dependencies:
+    postcss "^5.0.21"
+
+postcss-simple-vars@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-3.0.0.tgz#1fa4ccb4b7151d9f0d52fb8ea19a15c1319599d6"
   dependencies:
     postcss "^5.0.21"
 
@@ -2950,7 +2963,7 @@ postcss-unique-selectors@^2.0.2:
     postcss "^5.0.4"
     uniqs "^2.0.0"
 
-postcss-value-parser@^3.0.1, postcss-value-parser@^3.0.2, postcss-value-parser@^3.1.1, postcss-value-parser@^3.1.2, postcss-value-parser@^3.1.3, postcss-value-parser@^3.2.3, postcss-value-parser@^3.3.0:
+postcss-value-parser@^3.0.1, postcss-value-parser@^3.0.2, postcss-value-parser@^3.1.1, postcss-value-parser@^3.1.2, postcss-value-parser@^3.2.3, postcss-value-parser@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
 
@@ -2961,7 +2974,7 @@ postcss-zindex@^2.0.1:
     postcss "^5.0.4"
     uniqs "^2.0.0"
 
-postcss@^5.0.0, postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.18, postcss@^5.0.19, postcss@^5.0.2, postcss@^5.0.20, postcss@^5.0.21, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.0, postcss@^5.2.4:
+postcss@^5.0.0, postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.18, postcss@^5.0.19, postcss@^5.0.2, postcss@^5.0.20, postcss@^5.0.21, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.4:
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.4.tgz#8eb4bee3e5c4e091585b116df32d8db24a535f21"
   dependencies:
@@ -2981,16 +2994,6 @@ prepend-http@^1.0.0:
 preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
-
-primer-support@*:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-0.6.0.tgz#94541399e16574f8aa618d9fc99746670782b2b2"
-
-primer-utilities@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/primer-utilities/-/primer-utilities-1.0.0.tgz#4b347a11315304cd5bc04c4f742b0147ea6cd9af"
-  dependencies:
-    primer-support "*"
 
 private@^0.1.6:
   version "0.1.6"
@@ -3582,79 +3585,15 @@ stylehacks@^2.3.0:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
-stylelint:
-  version "7.4.2"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.4.2.tgz#b4ea1d71b2950d9a0b408877594f7d1ecb2b992e"
-  dependencies:
-    autoprefixer "^6.0.0"
-    balanced-match "^0.4.0"
-    chalk "^1.1.1"
-    colorguard "^1.2.0"
-    cosmiconfig "^2.0.0"
-    doiuse "^2.4.1"
-    execall "^1.0.0"
-    get-stdin "^5.0.0"
-    globby "^6.0.0"
-    globjoin "^0.1.4"
-    html-tags "^1.1.1"
-    ignore "^3.1.3"
-    known-css-properties "^0.0.5"
-    lodash "^4.0.0"
-    log-symbols "^1.0.2"
-    meow "^3.3.0"
-    multimatch "^2.1.0"
-    normalize-selector "^0.2.0"
-    postcss "^5.0.20"
-    postcss-less "^0.14.0"
-    postcss-media-query-parser "^0.2.0"
-    postcss-reporter "^1.3.0"
-    postcss-resolve-nested-selector "^0.1.1"
-    postcss-scss "^0.3.0"
-    postcss-selector-parser "^2.1.1"
-    postcss-value-parser "^3.1.1"
-    resolve-from "^2.0.0"
-    specificity "^0.3.0"
-    string-width "^2.0.0"
-    style-search "^0.1.0"
-    stylehacks "^2.3.0"
-    sugarss "^0.1.2"
-    svg-tags "^1.0.0"
-    table "^3.7.8"
-
-stylelint-config-css-modules:
+stylelint-config-css-modules@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-css-modules/-/stylelint-config-css-modules-0.1.0.tgz#6fc47c31836caad878e8daabde2b675899c2f4b6"
 
-stylelint-config-sass-guidelines:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-sass-guidelines/-/stylelint-config-sass-guidelines-1.1.0.tgz#515854da3dc4601a53945242918d193be80a4d92"
-  dependencies:
-    stylelint-scss "^1.3.4"
-    stylelint-selector-no-utility "^1.1.0"
-
-stylelint-config-standard:
+stylelint-config-standard@^13.0.2:
   version "13.0.2"
   resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-13.0.2.tgz#721e090c53b6e59f70f63d6a9fce026c9120671e"
 
-stylelint-scss, stylelint-scss@^1.3.4:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-1.3.4.tgz#a7a2597e897fff8430dfb22b940dfecbbfdc75a6"
-  dependencies:
-    lodash "^4.11.1"
-    postcss-media-query-parser "^0.1.0"
-    postcss-resolve-nested-selector "^0.1.1"
-    postcss-selector-parser "^2.0.0"
-    postcss-value-parser "^3.3.0"
-    stylelint "^7.0.3"
-
-stylelint-selector-no-utility@^1.1.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/stylelint-selector-no-utility/-/stylelint-selector-no-utility-1.3.0.tgz#6dc5b8c68d17bce9202755a15cfb7ed0edc9425b"
-  dependencies:
-    primer-utilities "^1.0.0"
-    stylelint "^7.0.0"
-
-stylelint@^7.0.0, stylelint@^7.0.3:
+stylelint@^7.4.2:
   version "7.5.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.5.0.tgz#fe19a22e793c419d4fc31d58f3948d599fdb81fb"
   dependencies:
@@ -3692,12 +3631,6 @@ stylelint@^7.0.0, stylelint@^7.0.3:
     sugarss "^0.2.0"
     svg-tags "^1.0.0"
     table "^3.7.8"
-
-sugarss@^0.1.2:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/sugarss/-/sugarss-0.1.6.tgz#fe3ac0e1e07282aef1de84a80b72386ff4e7ea37"
-  dependencies:
-    postcss "^5.2.0"
 
 sugarss@^0.2.0:
   version "0.2.0"
@@ -3814,15 +3747,15 @@ tryit@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.2.tgz#c196b0073e6b1c595d93c9c830855b7acc32a453"
 
-ts-loader@^0.8.2:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-0.8.2.tgz#7331296d13d5b3105cd905cebca39143eed2b255"
+ts-loader@^0.9.4:
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-0.9.4.tgz#d5620cfb58a67552a2f34da1fd345f479af923ca"
   dependencies:
     arrify "^1.0.0"
     colors "^1.0.3"
     enhanced-resolve "^0.9.0"
     loader-utils "^0.2.6"
-    object-assign "^2.0.0"
+    object-assign "^4.1.0"
     semver "^5.0.1"
 
 tty-browserify@0.0.0:
@@ -3853,6 +3786,10 @@ type-is@~1.6.13:
 typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+typescript@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.0.3.tgz#33dec9eae86b8eee327dd419ca050c853cabd514"
 
 uglify-js@~2.7.3:
   version "2.7.3"

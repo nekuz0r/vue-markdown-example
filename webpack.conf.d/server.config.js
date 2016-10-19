@@ -37,7 +37,6 @@ module.exports = {
       options: {
         ts: {
           transpileOnly: true,
-          compiler: 'ntypescript',
           silent: true
         }
       }
