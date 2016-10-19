@@ -26,7 +26,7 @@ const defaultInput = `# Some title
 
 @Component({
   name: 'App',
-  components: { MarkdownEditor },
+  components: { MarkdownEditor }
 })
 export default class App {
   render (h) {

@@ -24,7 +24,7 @@ export default class MarkdownEditor {
   data () {
     return {
       input: String()
-    }
+    };
   }
 
   get html () {
@@ -46,13 +46,13 @@ export default class MarkdownEditor {
 
   render (h) {
     return (
-      <div  class={style.editor}
+      <div class={style.editor}
             style={{ height: this.height, width: this.width }}>
         <HorizontalSplitPane>
           <div slot="left" class={style.input}>
             <textarea on-input={this.update}>{this.value}</textarea>
           </div>
-          <div  slot="right"
+          <div slot="right"
                 class={style.render}
                 domProps-innerHTML={this.html} />
         </HorizontalSplitPane>

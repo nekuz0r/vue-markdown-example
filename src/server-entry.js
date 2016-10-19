@@ -7,4 +7,4 @@ const app = new Vue({
 
 export default (context) => {
   return Promise.resolve(app);
-}
+};

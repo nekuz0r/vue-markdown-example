@@ -18,6 +18,12 @@
     "babel-plugin-syntax-jsx": "^6.13.0",
     "babel-plugin-transform-vue-jsx": "^3.1.0",
     "css-loader": "^0.25.0",
+    "eslint": "^3.8.1",
+    "eslint-config-semistandard": "^7.0.0",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-react": "^6.4.1",
+    "eslint-plugin-standard": "^2.0.1",
     "lodash-es": "^4.16.4",
     "node-sass": "^3.10.1",
     "node-style-loader": "0.0.1-alpha",
@@ -40,6 +46,21 @@
     "plugins": [
       "transform-vue-jsx"
     ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "semistandard"
+    ],
+    "rules": {
+      "no-new": "off"
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true,
+      "mocha": true
+    }
   },
   "author": "Leandre Gohy <leandre.gohy@hexeo.be>",
   "license": "MIT"
