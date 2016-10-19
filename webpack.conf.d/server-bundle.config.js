@@ -55,14 +55,15 @@ module.exports = {
         context: __dirname,
         postcss: function (webpack) {
           return [
-            require('postcss-import')({
+            require('postcss-partial-import')({
+              extension: '.scss',
               addDependencyTo: webpack,
               plugins: [
                 require("stylelint")({ /* your options */ })
               ]
             }),
-            require('postcss-each'),
-            require('postcss-simple-vars'),
+            require('postcss-advanced-variables'),
+            require('postcss-color-function'),
             require('postcss-nested'),
             require('postcss-autoreset')({
               reset: {

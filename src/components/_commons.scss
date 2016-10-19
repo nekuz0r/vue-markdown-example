@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
-@import './_colors.scss';
-@import './_sizes.scss';
+@import './colors';
+@import './sizes';
 
 $font-family: 'Roboto', sans-serif;
 $font-color: $midnight-blue;
