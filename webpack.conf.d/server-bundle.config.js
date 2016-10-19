@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
@@ -19,52 +20,59 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: [
+        use: [
           { loader: 'babel' },
-          {
-            loader: 'ts',
-            query: {
-              transpileOnly: true,
-              compiler: 'ntypescript',
-              silent: true
-            }
-          }
+          { loader: 'ts' }
         ]
       }, {
         test: /\.s?css$/,
-        loaders: [
+        use: [
           { loader: 'node-style' },
           {
-            //loader: 'css/locals',
             loader: 'css',
             query: {
               modules: true,
               camelCase: true,
-              importLoaders: true,
-              localIdentName: '[path][name]---[local]---[hash:base64:5]'
+              importLoaders: 1
             }
           },
-          {
-            loader: 'postcss',
-            options: {
-              plugins: function () {
-                return [
-                  require('postcss-autoreset')({
-                    reset: {
-                      boxSizing: 'border-box'
-                    }
-                  }),
-                  require('postcss-initial')(),
-                  require('autoprefixer')
-                ];
-              }
-            }
-          },
+          { loader: 'postcss' },
           { loader: 'sass' }
         ]
       }
     ]
   },
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    }),
+    new webpack.LoaderOptionsPlugin({
+      test: /\.s?css$/,
+      options: {
+        context: __dirname,
+        postcss: [
+          require('postcss-autoreset')({
+            reset: {
+              boxSizing: 'border-box'
+            }
+          }),
+          require('postcss-initial')(),
+          require('autoprefixer')
+        ]
+      }
+    }),
+    new webpack.LoaderOptionsPlugin({
+      test: /\.jsx?$/,
+      options: {
+        ts: {
+          transpileOnly: true,
+          compiler: 'ntypescript',
+          silent: true
+        }
+      }
+    }),
+    new webpack.optimize.DedupePlugin()
+  ],
   externals: nodeExternals({
     whitelist: [ /^node-style-loader/ ]
   })

@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
@@ -17,18 +18,27 @@ module.exports = {
     rules: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loaders: [
+      use: [
         { loader: 'babel' },
-        {
-          loader: 'ts',
-          query: {
-            transpileOnly: true,
-            compiler: 'ntypescript',
-            silent: true
-          }
-        }
+        { loader: 'ts' }
       ],
     }]
   },
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    }),
+    new webpack.LoaderOptionsPlugin({
+      test: /\.jsx?$/,
+      options: {
+        ts: {
+          transpileOnly: true,
+          compiler: 'ntypescript',
+          silent: true
+        }
+      }
+    }),
+    new webpack.optimize.DedupePlugin()
+  ],
   externals: nodeExternals()
 };

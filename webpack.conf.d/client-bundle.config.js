@@ -15,23 +15,21 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: [
+        use: [
           { loader: 'babel' },
-          {
-            loader: 'ts'
-          }
+          { loader: 'ts' }
         ]
       }, {
         test: /\.s?css$/,
-        loaders: [
+        use: [
           { loader: 'style' },
           {
             loader: 'css',
             query: {
               modules: true,
               camelCase: true,
-              importLoaders: 1,
-              localIdentName: '[path][name]---[local]---[hash:base64:5]'
+              importLoaders: 1
+              //localIdentName: '[path][name]---[local]---[hash:base64:5]'
             }
           },
           { loader: 'postcss' },
@@ -42,7 +40,9 @@ module.exports = {
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({
-      minimize: true,
+      minimize: true
+    }),
+    new webpack.LoaderOptionsPlugin({
       test: /\.s?css$/,
       options: {
         context: __dirname,
@@ -70,6 +70,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"dev"'
     }),
+    new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.DedupePlugin()
   ]
 };

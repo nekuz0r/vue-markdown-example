@@ -8,8 +8,10 @@
     display: inline-block;
     position: relative;
     width: 50%;
+    height: 100%;
     vertical-align: top;
     overflow: hidden;
+    transition: width 0.2s;
   }
 
   .handle {
